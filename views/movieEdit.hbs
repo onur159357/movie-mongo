@@ -1,0 +1,38 @@
+<h1> {{text}} </h1>
+
+<form action="/movie/movieEdit/{{detail._id}}" method="post">
+    <ul>
+        <li>
+            <label for="movieName">Adı</label>
+            <input type="text" name="movieName" value="{{detail.movieName}}">
+        </li>
+        <li>
+            <label for="category">Kategorisi</label>
+            <input type="text" name="category" value="{{detail.category}}">
+        </li>
+        <li>
+            <label for="country">Ülkesi</label>
+            <input type="text" name="country" value="{{detail.country}}">
+        </li>
+        <li>
+            <label for="addYear">Eklenme Tarihi</label>
+            <input type="number" name="addYear" value="{{detail.addYear}}">
+        </li>
+        <li>
+            <div id="test"></div>
+            
+            <label for="year">Yılı</label>
+            <input type="text" name="year" value="{{newDate}}"> 
+            
+        </li>
+        <li>
+            <label for="imdbScore">İmdb Puanı</label>
+            <input type="number" step="0.1" name="imdbScore" value="{{detail.imdbScore}}">
+        </li>
+        <li>
+            <button type="submit">Değişiklikleri Kaydet</button>
+        </li>
+    </ul>
+</form>
+<a href="/movie">İptal</a>
+

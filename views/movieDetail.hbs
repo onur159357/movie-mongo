@@ -1,0 +1,35 @@
+{{#if text}}
+<h1>{{text}}</h1>
+{{/if}}
+<ul>
+    <li>
+        <b>id</b>
+        <span>{{detail._id}}</span>
+    </li>
+    <li>
+        <b>Adı</b>
+        <span>{{detail.movieName}}</span>
+    </li>
+    <li>
+        <b>Kategorisi</b>
+        <span>{{detail.category}}</span>
+    </li>
+    <li>
+        <b>Ülkesi</b>
+        <span>{{detail.country}}</span>
+    </li>
+    <li>
+        <b>Eklenme tarihi</b>
+        <span>{{detail.addYear}}</span>
+    </li>
+    <li>
+        <b>Yılı</b>
+        <span>{{detail.year}}</span>
+    </li>
+    <li>
+        <b>İmdb puanı</b>
+        <span>{{detail.imdbScore}}</span>
+    </li>
+</ul>
+<a href="/movie">Film Listesi</a>
+<a href="/movie/movieEdit/{{detail._id}}">Düzenle</a>

@@ -1,0 +1,45 @@
+{{#if notification}}
+<h1> {{notification}} </h1>
+{{/if}}
+
+<table border="1">
+    <tr>
+        <td>id</td>
+        <td>movie name</td>
+        <td>category</td>
+        <td>country</td>
+        <td>add year</td>
+        <td>year</td>
+        <td>imdb score</td>
+        <td>Sil</td>
+        <td>Detay</td>
+        <td>Düzenle</td>
+    </tr>
+    {{#each movieList as | text index | }}
+    <tr>
+        <td> {{text._id}} </td>
+        <td> {{text.movieName}} </td>
+        <td> {{text.category}} </td>
+        <td> {{text.country}} </td>
+        <td> {{text.addYear}} </td>
+        <td> {{text.year}} </td>
+        <td> {{text.imdbScore}} </td>
+        <td>
+            <form action="/movie/{{text._id}}?method=delete" method="post">
+                <button type="submit">Sil</button>
+            </form>
+        </td>
+        <td>
+            <a href="/movie/{{text._id}}">Detay</a>
+        </td>
+        <td>
+            <a href="/movie/movieEdit/{{text._id}}">Düzenle</a>
+        </td>
+    </tr>  
+    {{/each}}
+</table>
+
+{{#if noInformation}}
+<p>{{noInformation}}</p>
+{{/if}}
+<a href="/movie/movieadd">video ekle</a>
